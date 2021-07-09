@@ -7,6 +7,10 @@
 
         <h1>HTTP method</h1>
 
+                <form action="/accounts/hello_world/" method="post">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-outline-dark rounded-pill px-5">
+
         <h3>{{ text }}</h3>
 
     </div>
