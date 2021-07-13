@@ -7,12 +7,18 @@
 
         <h1>HTTP method</h1>
 
-                <form action="/accounts/hello_world/" method="post">
+            <form action="/accounts/hello_world/" method="post">
             {% csrf_token %}
             <input type="text" name='input_text'>
             <input type="submit" class="btn btn-outline-dark rounded-pill px-5">
 
-        <h3>{{ model_instance.text }}</h3>
+            </form>
+
+            {% for data in data_list %}
+
+                <h3>{{ data.text }}</h3>
+
+            {% endfor %}
 
     </div>
 
