@@ -7,7 +7,7 @@ from django.shortcuts import render
 
 
 # 아주 간단한 뷰
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView
 
 from accountapp.models import NewModel
@@ -34,4 +34,5 @@ def hello_world(request):
 class AccountCreateView(CreateView):
     model = User
     form_class = UserCreationForm
-    success_url =
+    success_url = reverse_lazy('accountapp: hello_world')
+    template_name = 'accountapp/create.html' # 나중에 만들것 : 이렇게 로직이 완성되었다.
