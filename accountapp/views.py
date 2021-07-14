@@ -34,5 +34,5 @@ def hello_world(request):
 class AccountCreateView(CreateView):
     model = User
     form_class = UserCreationForm
-    success_url = reverse_lazy('accountapp: hello_world')
+    success_url = reverse_lazy('accountapp:hello_world')
     template_name = 'accountapp/create.html' # 나중에 만들것 : 이렇게 로직이 완성되었다.
